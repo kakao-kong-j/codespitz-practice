@@ -1,0 +1,49 @@
+{
+  "name": "code-spitz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/cli": "^7.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-json-strings": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/preset-env": "latest",
+    "@babel/preset-stage-3": "^7.0.0"
+  },
+  "scripts": {
+    "build": "babel ./85-3/index.js -d lib",
+    "prestart": "npm run build",
+    "start": "node ./lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinhokong/codespitz-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinhokong/codespitz-practice/issues"
+  },
+  "homepage": "https://github.com/jinhokong/codespitz-practice#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-syntax-dynamic-import",
+      "@babel/plugin-syntax-import-meta",
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": false
+        }
+      ],
+      "@babel/plugin-proposal-json-strings"
+    ]
+  }
+}
